@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #ebe9e9;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  padding: 0.5rem 2.5rem;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.container header {
+  margin-bottom: 2rem;
+}
+
+.container header h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.container header p {
+  font-size: 1.4rem;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.FinalMessage {
+  font-size: 1.4rem;
+  background-color: #0307ff;
+  color: #fff;
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+#btnLoadMore {
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 0.8rem 1rem;
+  font-size: 1.4rem;
+  background-color: #008000;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#btnLoadMore:hover {
+  background-color: #00a800;
+}
+
+@media screen and (min-width: 380px) {
+  .container {
+    max-width: 38rem;
+    margin: 0 auto;
+  }
+
+  .pokemon-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 57.6rem;
+    margin: 0 auto;
+  }
+
+  .pokemon-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #btnLoadMore {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 99.2rem;
+    margin: 0 auto;
+  }
+
+  .pokemon-list {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  #btnLoadMore {
+    width: 10%;
+  }
+}
