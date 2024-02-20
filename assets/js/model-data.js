@@ -11,3 +11,14 @@ class PokemonData {
     return this.types[0].type.name;
   }
 }
+
+class PokemonDataDetails extends PokemonData {
+  constructor(id, name, types, image, url) {
+    super(id, name, types, image, url);
+    this.description();
+  }
+
+  description() {}
+
+  // montar outros detalhes aqui para utilizar na aplicação
+}

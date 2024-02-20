@@ -12,7 +12,9 @@ const templateHTMLSpanPokemonTypes = (pokemonTypes) => {
 
 const templateHTMLLi = (pokemon) => {
   return `
-      <li class="pokemon-card ${pokemon.getTypeClass()}">
+      <a href="./detail-page.html/?id=${
+        pokemon.id
+      }"><li class="pokemon-card ${pokemon.getTypeClass()}">
         <span class="pokemon-number">#${pokemon.id}</span>
         <p>${pokemon.name}</p>
         <div class="pokemon-info">
@@ -26,7 +28,7 @@ const templateHTMLLi = (pokemon) => {
               )}             
             </div>
         </div>
-      </li>`;
+      </li></a>`;
 };
 
 const finalMessage = (pagination) => {

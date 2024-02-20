@@ -35,3 +35,25 @@ pokeApi.getPokemons = async (offset = 0, limit = 5) => {
   });
   return modelPokemons;
 };
+
+pokeApi.getPokemonOneDetails = async () => {
+  const param = getQueryStringParams();
+  const pokemon = await fetch(urlAPI + `/${param.id}/`, {
+    method: "GET",
+    headers: headersList,
+  })
+    .then((result) => result.json())
+    .then((pokemon) => pokemon);
+
+  modelPokemons.push(
+    new PokemonDataDetails(
+      pokemon.id,
+      pokemon.name,
+      pokemon.types,
+      pokemon.sprites.other.home.front_default,
+      `https://pokeapi.co/api/v2/pokemon/${pokemon.id}/`
+    )
+  );
+  console.log(modelPokemons[0]);
+  return modelPokemons[0];
+};
