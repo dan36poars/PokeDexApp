@@ -11,3 +11,14 @@ const getQueryStringParams = () => {
   params[key] = value;
   return params;
 };
+
+const openTab = (tabId) => {
+  let tabContents = document.querySelectorAll(".pokemon-tab-content");
+  for (const element of tabContents) {
+    element.classList.remove("show");
+  }
+
+  let selectedTab = document.querySelector(`#${tabId}`);
+  selectedTab.classList.add("show");
+  console.log(selectedTab);
+};

@@ -10,3 +10,14 @@
 .fa-regular {
   font-size: 2rem;
 }
+
+.fa-solid.fa-mars {
+  margin-right: 1rem;
+  color: blue;
+}
+
+.fa-solid.fa-mercury {
+  margin: 0 1rem;
+  margin-left: 3rem;
+  color: palevioletred;
+}

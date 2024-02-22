@@ -1,1 +1,2 @@
+openTab("about");
 pokeApi.getPokemonOneDetails();

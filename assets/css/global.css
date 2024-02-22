@@ -26,7 +26,6 @@ a {
 .container {
   padding: 0.5rem 2.5rem;
   background-color: #fff;
-  overflow: auto;
 }
 
 .container header {
@@ -80,7 +79,8 @@ a {
 }
 
 @media screen and (min-width: 380px) {
-  .container {
+  .container,
+  .details {
     max-width: 38rem;
     margin: 0 auto;
   }
@@ -91,7 +91,8 @@ a {
 }
 
 @media screen and (min-width: 576px) {
-  .container {
+  .container,
+  .details {
     max-width: 57.6rem;
     margin: 0 auto;
   }
@@ -106,7 +107,8 @@ a {
 }
 
 @media screen and (min-width: 992px) {
-  .container {
+  .container,
+  .details {
     max-width: 99.2rem;
     margin: 0 auto;
   }
