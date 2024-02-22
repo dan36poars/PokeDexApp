@@ -54,6 +54,5 @@ pokeApi.getPokemonOneDetails = async () => {
       `https://pokeapi.co/api/v2/pokemon/${pokemon.id}/`
     )
   );
-  console.log(modelPokemons[0]);
   return modelPokemons[0];
 };

@@ -1,3 +1,6 @@
+/**
+ * load more details about pokemon
+ */
 btnLoadMore.onclick = () => {
   page += limit;
   const qtdRecordNextPage = page + limit;

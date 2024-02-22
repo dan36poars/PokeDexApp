@@ -19,6 +19,8 @@
     <link type="text/css" rel="stylesheet" href="../assets/css/pokemons-type-colors.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/detail-page.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/icons-detail-page.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/colors.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/text-colors.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/bg-details-page.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/global.css">
 </head>
@@ -55,10 +57,10 @@
         </div>
         <div class="details-container">
             <div class="pokemon-tabs-container">
-                <div class="pokemon-tab active" onclick="openTab('about')">About</div>
-                <div class="pokemon-tab" onclick="openTab('base-stats')">Base Stats</div>
-                <div class="pokemon-tab" onclick="openTab('evolution')">Evolution</div>
-                <div class="pokemon-tab" onclick="openTab('moves')">Moves</div>
+                <div class="pokemon-tab active" onclick="openTab(event, 'about')">About</div>
+                <div class="pokemon-tab" onclick="openTab(event, 'base-stats')">Base Stats</div>
+                <div class="pokemon-tab" onclick="openTab(event, 'evolution')">Evolution</div>
+                <div class="pokemon-tab" onclick="openTab(event, 'moves')">Moves</div>
             </div>
             <div class="pokemon-tab-content show" id="about">
                 <div class="pokemon-data">
@@ -97,10 +99,41 @@
                 </div>
             </div>
             <div class="pokemon-tab-content" id="base-stats">
-                <div class="pokemon-data">
-                    <span class="pokemon-tab-head">HP</span>
-                    <span class="pokemon-tab-data">45</span>
-                    <span class="pokemon-percentage-line"></span>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">HP</span>
+                        <span class="pokemon-tab-data" id="percentLabel">45</span>
+                    </div>
+                    <div class="pokemon-percentage-line red" id="percentLine"></div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Attack</span>
+                        <span class="pokemon-tab-data" id="percentLabel">60</span>
+                    </div>
+                    <div class="pokemon-percentage-line green" id="percentLine"></div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Defense</span>
+                        <span class="pokemon-tab-data" id="percentLabel">48</span>
+                    </div>
+                    <div class="pokemon-percentage-line green" id="percentLine"></div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Sp Attack</span>
+                        <span class="pokemon-tab-data" id="percentLabel">65</span>
+                    </div>
+                    <div class="pokemon-percentage-line green" id="percentLine"></div>
+                </div>
+                <div class="pokemon-section">
+                    <div class="pokemon-section-title">
+                        <p>Type defenses</p>
+                    </div>
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-data gray">The effectiveness of each type on Charmander.</span>
+                    </div>
                 </div>
             </div>
         </div>

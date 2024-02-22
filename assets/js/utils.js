@@ -12,13 +12,25 @@ const getQueryStringParams = () => {
   return params;
 };
 
-const openTab = (tabId) => {
+/**
+ * @brief show tab when clicked
+ * @param {Object} event
+ * @param {string} tabId
+ */
+const openTab = (event, tabId) => {
+  const eventName = event.currentTarget;
   let tabContents = document.querySelectorAll(".pokemon-tab-content");
+  let tabHeader = document.querySelectorAll(".pokemon-tab");
+
+  for (const element of tabHeader) {
+    element.classList.remove("active");
+  }
+
   for (const element of tabContents) {
     element.classList.remove("show");
   }
 
-  let selectedTab = document.querySelector(`#${tabId}`);
+  const selectedTab = document.querySelector(`#${tabId}`);
   selectedTab.classList.add("show");
-  console.log(selectedTab);
+  eventName.classList.add("active");
 };

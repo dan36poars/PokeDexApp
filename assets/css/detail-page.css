@@ -8,6 +8,11 @@
   line-height: 1.4;
 }
 
+.content-flex {
+  display: flex;
+  align-items: center;
+}
+
 .pokemon-info-details {
   display: flex;
   flex: 1;
@@ -110,17 +115,22 @@
 }
 
 .pokemon-data {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
+  flex-basis: 20rem;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem;
 }
 
 .pokemon-tab-head {
+  display: inline;
   font-size: 1.7rem;
-  margin-right: 3rem;
   font-weight: 700;
   color: #757474;
 }
 
 .pokemon-tab-data {
+  display: inline;
   color: #1a1a1a;
   font-size: 1.7em;
   font-weight: 700;
@@ -137,5 +147,6 @@
 }
 
 .pokemon-percentage-line {
-  width: 65%;
+  height: 0.8rem;
+  width: 100%;
 }
