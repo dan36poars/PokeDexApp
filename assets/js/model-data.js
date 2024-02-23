@@ -61,8 +61,6 @@ class PokemonDataDetails extends PokemonData {
 
       const speciePokemon = await specie.json();
 
-      console.log(pokemon);
-
       this.detailsComponent.abilities = pokemon.abilities;
       this.detailsComponent.specie = pokemon.species.name;
 

@@ -12,7 +12,7 @@ const templateHTMLSpanPokemonTypes = (pokemonTypes) => {
 
 const templateHTMLLi = (pokemon) => {
   return `
-      <a href="./detail-page.html/?id=${
+      <a href="detail-page.html?id=${
         pokemon.id
       }"><li class="pokemon-card ${pokemon.getTypeClass()}">
         <span class="pokemon-number">#${pokemon.id}</span>
@@ -160,7 +160,6 @@ const templateHTMLabout = (pokemonDetails) => {
 };
 
 const templateHTMLBaseStats = (pokemonDetails) => {
-  console.log(pokemonDetails.effect_entries);
   return `${templateHTMLStats(pokemonDetails.detailsComponent.stats)}
           ${templateHTMLSumTotal(pokemonDetails.detailsComponent.total)}
           <div class="pokemon-section">

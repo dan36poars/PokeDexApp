@@ -29,7 +29,7 @@ pokeApi.getPokemons = async (offset = 0, limit = 5) => {
         pokemons.name,
         pokemons.types,
         pokemons.sprites.other.home.front_default,
-        `https://pokeapi.co/api/v2/pokemon/${pokemons.id}/`
+        `https://pokeapi.co/api/v2/pokemon/${pokemons.id}`
       )
     );
   });
@@ -38,7 +38,8 @@ pokeApi.getPokemons = async (offset = 0, limit = 5) => {
 
 pokeApi.getPokemonOneDetails = async () => {
   const param = getQueryStringParams();
-  const pokemon = await fetch(urlAPI + `/${param.id}/`, {
+  console.log(param);
+  const pokemon = await fetch(urlAPI + `/${param.id}`, {
     method: "GET",
     headers: headersList,
   })
@@ -50,10 +51,10 @@ pokeApi.getPokemonOneDetails = async () => {
     pokemon.name,
     pokemon.types,
     pokemon.sprites.other.home.front_default,
-    `https://pokeapi.co/api/v2/pokemon/${pokemon.id}/`
+    `https://pokeapi.co/api/v2/pokemon/${pokemon.id}`
   );
 
-  const details = await pokemonOne.getDetailsComponent();
+  await pokemonOne.getDetailsComponent();
 
   return pokemonOne;
 };
