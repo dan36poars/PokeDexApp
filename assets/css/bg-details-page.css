@@ -4,6 +4,7 @@
   width: 100%;
   height: 100vh;
   background-size: cover;
+  border-radius: 3rem;
 }
 
 .bg-details-normal {

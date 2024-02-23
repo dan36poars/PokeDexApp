@@ -38,14 +38,14 @@
         <header>
             <div class="pokemon-card-details">
                 <div class="pokemon-info-details">
-                    <div class="pokemon-descriptions">
+                    <!-- <div class="pokemon-descriptions">
                         <p>venusaur</p>
                         <span class="grass">Grass</span>
                         <span class="poison">Poison</span>
                     </div>
                     <div class="pokemon-number-details">
                         <span>#003</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </header>
@@ -63,19 +63,19 @@
                 <div class="pokemon-tab" onclick="openTab(event, 'moves')">Moves</div>
             </div>
             <div class="pokemon-tab-content show" id="about">
-                <div class="pokemon-data">
+                <!-- <div class="pokemon-details-info">
                     <span class="pokemon-tab-head">Species</span>
                     <span class="pokemon-tab-data">Seed</span>
                 </div>
-                <div class="pokemon-data">
+                <div class="pokemon-details-info">
                     <span class="pokemon-tab-head">Height</span>
                     <span class="pokemon-tab-data">2'3.6" (0.70cm)</span>
                 </div>
-                <div class="pokemon-data">
+                <div class="pokemon-details-info">
                     <span class="pokemon-tab-head">Weight</span>
                     <span class="pokemon-tab-data">12.5lbs (6.9 kg)</span>
                 </div>
-                <div class="pokemon-data">
+                <div class="pokemon-details-info">
                     <span class="pokemon-tab-head">Abilities</span>
                     <span class="pokemon-tab-data">OverGrow, Chlorophyll</span>
                 </div>
@@ -96,7 +96,7 @@
                         <span class="pokemon-tab-head">Egg Cycle</span>
                         <span class="pokemon-tab-data">Grass</span>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="pokemon-tab-content" id="base-stats">
                 <div class="content-flex">
@@ -104,28 +104,63 @@
                         <span class="pokemon-tab-head">HP</span>
                         <span class="pokemon-tab-data" id="percentLabel">45</span>
                     </div>
-                    <div class="pokemon-percentage-line red" id="percentLine"></div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line red" id="percentLine"></div>
+                    </div>
                 </div>
                 <div class="content-flex">
                     <div class="pokemon-data">
                         <span class="pokemon-tab-head">Attack</span>
                         <span class="pokemon-tab-data" id="percentLabel">60</span>
                     </div>
-                    <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
                 </div>
                 <div class="content-flex">
                     <div class="pokemon-data">
                         <span class="pokemon-tab-head">Defense</span>
                         <span class="pokemon-tab-data" id="percentLabel">48</span>
                     </div>
-                    <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
                 </div>
                 <div class="content-flex">
                     <div class="pokemon-data">
-                        <span class="pokemon-tab-head">Sp Attack</span>
+                        <span class="pokemon-tab-head">Sp. Atk</span>
                         <span class="pokemon-tab-data" id="percentLabel">65</span>
                     </div>
-                    <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Sp. Def</span>
+                        <span class="pokemon-tab-data" id="percentLabel">65</span>
+                    </div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Seed</span>
+                        <span class="pokemon-tab-data" id="percentLabel">65</span>
+                    </div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Total</span>
+                        <span class="pokemon-tab-data" id="percentLabel">65</span>
+                    </div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
                 </div>
                 <div class="pokemon-section">
                     <div class="pokemon-section-title">

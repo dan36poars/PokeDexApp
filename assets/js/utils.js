@@ -34,3 +34,14 @@ const openTab = (event, tabId) => {
   selectedTab.classList.add("show");
   eventName.classList.add("active");
 };
+
+/**
+ * @brief fill in the data for a template
+ * @param {*} percentage
+ * @returns template HTML
+ */
+const barPercentage = (percentage) => {
+  const barPercentage = document.querySelector(`#${percentage}`);
+
+  return ``;
+};

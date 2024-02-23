@@ -45,14 +45,15 @@ pokeApi.getPokemonOneDetails = async () => {
     .then((result) => result.json())
     .then((pokemon) => pokemon);
 
-  modelPokemons.push(
-    new PokemonDataDetails(
-      pokemon.id,
-      pokemon.name,
-      pokemon.types,
-      pokemon.sprites.other.home.front_default,
-      `https://pokeapi.co/api/v2/pokemon/${pokemon.id}/`
-    )
+  const pokemonOne = new PokemonDataDetails(
+    pokemon.id,
+    pokemon.name,
+    pokemon.types,
+    pokemon.sprites.other.home.front_default,
+    `https://pokeapi.co/api/v2/pokemon/${pokemon.id}/`
   );
-  return modelPokemons[0];
+
+  const details = await pokemonOne.getDetailsComponent();
+
+  return pokemonOne;
 };

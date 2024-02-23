@@ -21,7 +21,7 @@
 
 .pokemon-info-details .pokemon-descriptions p {
   text-transform: capitalize;
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #fff;
@@ -105,6 +105,19 @@
   border-bottom: 0.3rem solid rgb(82, 82, 245);
 }
 
+.pokemon-details-info {
+  display: flex;
+}
+
+.pokemon-details-info span {
+  flex-basis: 45%;
+  margin: 1rem 0;
+}
+
+.pokemon-details-info span:nth-child(2) {
+  flex-basis: 100%;
+}
+
 .pokemon-tab-content {
   display: none;
   padding: 0 2.5rem;
@@ -116,7 +129,7 @@
 
 .pokemon-data {
   margin: 1.5rem 0;
-  flex-basis: 20rem;
+  flex-basis: 26rem;
   display: flex;
   justify-content: space-between;
   padding-right: 2rem;
@@ -146,7 +159,11 @@
   color: #2f2e2e;
 }
 
+.section-percentage-level {
+  width: 50%;
+}
+
 .pokemon-percentage-line {
-  height: 0.8rem;
-  width: 100%;
+  height: 0.4rem;
+  width: 50%;
 }
