@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex App | Bulbasaur</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- normalize -->
+    <link href="https://cdn.jsdelivr.net/npm/normalize.css@8/normalize.min.css " rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/pokemons-type-colors.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/detail-page.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/icons-detail-page.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/colors.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/text-colors.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/bg-details-page.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/global.css">
+</head>
+
+<body>
+    <div class="container clearfix bg-details bg-details-grass">
+        <nav class="navigation">
+            <a href="http://127.0.0.1:8080/index.html">
+                <i class="fa-solid fa-arrow-left icon"></i>
+            </a>
+            <a href="">
+                <i class="fa-regular fa-heart icon"></i>
+            </a>
+        </nav>
+        <header>
+            <div class="pokemon-card-details">
+                <div class="pokemon-info-details">
+                    <!-- <div class="pokemon-descriptions">
+                        <p>venusaur</p>
+                        <span class="grass">Grass</span>
+                        <span class="poison">Poison</span>
+                    </div>
+                    <div class="pokemon-number-details">
+                        <span>#003</span>
+                    </div> -->
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="details">
+        <div class="pokemon-img-details">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png"
+                alt="bulbasaur">
+        </div>
+        <div class="details-container">
+            <div class="pokemon-tabs-container">
+                <div class="pokemon-tab active" onclick="openTab(event, 'about')">About</div>
+                <div class="pokemon-tab" onclick="openTab(event, 'base-stats')">Base Stats</div>
+                <div class="pokemon-tab" onclick="openTab(event, 'evolution')">Evolution</div>
+                <div class="pokemon-tab" onclick="openTab(event, 'moves')">Moves</div>
+            </div>
+            <div class="pokemon-tab-content show" id="about">
+                <!-- <div class="pokemon-details-info">
+                    <span class="pokemon-tab-head">Species</span>
+                    <span class="pokemon-tab-data">Seed</span>
+                </div>
+                <div class="pokemon-details-info">
+                    <span class="pokemon-tab-head">Height</span>
+                    <span class="pokemon-tab-data">2'3.6" (0.70cm)</span>
+                </div>
+                <div class="pokemon-details-info">
+                    <span class="pokemon-tab-head">Weight</span>
+                    <span class="pokemon-tab-data">12.5lbs (6.9 kg)</span>
+                </div>
+                <div class="pokemon-details-info">
+                    <span class="pokemon-tab-head">Abilities</span>
+                    <span class="pokemon-tab-data">OverGrow, Chlorophyll</span>
+                </div>
+                <div class="pokemon-section">
+                    <div class="pokemon-section-title">
+                        <p>Breeding</p>
+                    </div>
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Gender</span>
+                        <span class="pokemon-tab-data"><i class="fa-solid fa-mars"></i>85% <i
+                                class="fa-solid fa-mercury"></i>12.5%</span>
+                    </div>
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Egg Group</span>
+                        <span class="pokemon-tab-data">Monster</span>
+                    </div>
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Egg Cycle</span>
+                        <span class="pokemon-tab-data">Grass</span>
+                    </div>
+                </div> -->
+            </div>
+            <div class="pokemon-tab-content" id="base-stats">
+                <!-- <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">HP</span>
+                        <span class="pokemon-tab-data" id="percentLabel">45</span>
+                    </div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line red" id="percentLine"></div>
+                    </div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Attack</span>
+                        <span class="pokemon-tab-data" id="percentLabel">60</span>
+                    </div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Defense</span>
+                        <span class="pokemon-tab-data" id="percentLabel">48</span>
+                    </div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Sp. Atk</span>
+                        <span class="pokemon-tab-data" id="percentLabel">65</span>
+                    </div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Sp. Def</span>
+                        <span class="pokemon-tab-data" id="percentLabel">65</span>
+                    </div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Seed</span>
+                        <span class="pokemon-tab-data" id="percentLabel">65</span>
+                    </div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
+                </div>
+                <div class="content-flex">
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-head">Total</span>
+                        <span class="pokemon-tab-data" id="percentLabel">65</span>
+                    </div>
+                    <div class="section-percentage-level">
+                        <div class="pokemon-percentage-line green" id="percentLine"></div>
+                    </div>
+                </div>
+                <div class="pokemon-section">
+                    <div class="pokemon-section-title">
+                        <p>Ability Effect</p>
+                    </div>
+                    <div class="pokemon-data">
+                        <span class="pokemon-tab-data gray">The effectiveness of each type on Charmander.</span>
+                    </div>
+                </div> -->
+            </div>
+            <div class="pokemon-tab-content" id="evolution">
+                <div class="pokemon-details-info">
+                    <span class="pokemon-tab-head">Still development this section</span>
+                </div>
+            </div>
+            <div class="pokemon-tab-content" id="moves">
+                <div class="pokemon-details-info">
+                    <span class="pokemon-tab-head">Still development this section</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/templates-fn-html.js"></script>
+    <script src="../assets/js/model-data.js"></script>
+    <script src="../assets/js/poke-api.js"></script>
+    <script src="../assets/js/details-page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+.bg-details {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  border-radius: 3rem;
+}
+
+.bg-details-normal {
+  background-image: url("../images/background-details-normal.png");
+}
+
+.bg-details-fire {
+  background-image: url("../images/background-details-fire.png");
+}
+
+.bg-details-water {
+  background-image: url("../images/background-details-water.png");
+}
+
+.bg-details-grass {
+  background-image: url("../images/background-details-grass.png");
+}
+
+.bg-details-electric {
+  background-image: url("../images/background-details-electric.png");
+}
+
+.bg-details-ice {
+  background-image: url("../images/background-details-ice.png");
+}
+
+.bg-details-ground {
+  background-image: url("../images/background-details-ground.png");
+}
+
+.bg-details-flying {
+  background-image: url("../images/background-details-flying.png");
+}
+
+.bg-details-poison {
+  background-image: url("../images/background-details-poison.png");
+}
+
+.bg-details-fighting {
+  background-image: url("../images/background-details-fighting.png");
+}
+
+.bg-details-psychic {
+  background-image: url("../images/background-details-psychic.png");
+}
+
+.bg-details-dark {
+  background-image: url("../images/background-details-dark.png");
+}
+
+.bg-details-rock {
+  background-image: url("../images/background-details-rock.png");
+}
+
+.bg-details-bug {
+  background-image: url("../images/background-details-bug.png");
+}
+
+.bg-details-ghost {
+  background-image: url("../images/background-details-ghost.png");
+}
+
+.bg-details-steel {
+  background-image: url("../images/background-details-steel.png");
+}
+
+.bg-details-dragon {
+  background-image: url("../images/background-details-dragon.png");
+}
+
+.bg-details-fairy {
+  background-image: url("../images/background-details-fairy.png");
+}
