@@ -7,6 +7,8 @@
 
 body {
   background-color: #ebe9e9;
+  background-image: url("../images/background-pokemon-util.png");
+  background-repeat: repeat;
 }
 
 a {

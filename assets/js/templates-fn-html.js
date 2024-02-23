@@ -113,6 +113,10 @@ const templateHTMLSumTotal = (total) => {
           </div>`;
 };
 
+const templateHTMLDescriptionEffectEntry = (effect) => {
+  return `<span class="pokemon-tab-data gray">${effect}</span>`;
+};
+
 const templateHTMLabout = (pokemonDetails) => {
   return `<div class="pokemon-details-info">
   <span class="pokemon-tab-head">Species</span>
@@ -156,14 +160,17 @@ const templateHTMLabout = (pokemonDetails) => {
 };
 
 const templateHTMLBaseStats = (pokemonDetails) => {
+  console.log(pokemonDetails.effect_entries);
   return `${templateHTMLStats(pokemonDetails.detailsComponent.stats)}
           ${templateHTMLSumTotal(pokemonDetails.detailsComponent.total)}
           <div class="pokemon-section">
             <div class="pokemon-section-title">
-                <p>Type defenses</p>
+                <p>Ability Effect</p>
             </div>
             <div class="pokemon-data">
-                <span class="pokemon-tab-data gray">The effectiveness of each type on Charmander.</span>
+                ${templateHTMLDescriptionEffectEntry(
+                  pokemonDetails.detailsComponent.effect_entries
+                )}
             </div>
           </div>`;
 };

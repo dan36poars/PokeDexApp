@@ -18,6 +18,20 @@ class PokemonDataDetails extends PokemonData {
     super(id, name, types, image, url);
   }
 
+  async getAbilityEffectEntry(url) {
+    try {
+      const description = await fetch(url, {
+        method: "GET",
+        headers: headersList,
+      }).then((result) => result.json());
+
+      this.detailsComponent.effect_entries =
+        description.effect_entries[1].effect;
+    } catch (error) {
+      throw new Error(`Error: ${error}`);
+    }
+  }
+
   async populateStats(populate, pokemons) {
     for (const element of pokemons) {
       populate.push({
@@ -67,12 +81,15 @@ class PokemonDataDetails extends PokemonData {
         this.detailsComponent.stats
       );
     } catch (error) {
-      console.log("Error: " + error);
+      throw new Error("Error: " + error);
     }
   }
 
   async getDetailsComponent() {
     await this.getDetails();
+    await this.getAbilityEffectEntry(
+      `https://pokeapi.co/api/v2/ability/${this.id}`
+    );
     return this.detailsComponent;
   }
 }
