@@ -49,13 +49,15 @@
 }
 
 .pokemon-img-details {
-  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .pokemon-img-details img {
-  max-width: 100%;
+  max-width: 70%;
   object-fit: cover;
   z-index: 10;
 }

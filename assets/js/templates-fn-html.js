@@ -156,7 +156,8 @@ const templateHTMLabout = (pokemonDetails) => {
       <span class="pokemon-tab-head">Egg Cycle</span>
       ${templateHTMLEggCycle(pokemonDetails.detailsComponent.egg_cycle)}
   </div>
-</div>`;
+</div>
+`;
 };
 
 const templateHTMLBaseStats = (pokemonDetails) => {
